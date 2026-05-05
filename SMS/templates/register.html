@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+<h2>Register</h2>
+<form method="post">
+  Username:
+  <input name="username" required>
+
+  Password:
+  <input type="password" name="password" required>
+
+  Phone Number (with country code, e.g., +91 9876543210):
+  <input name="phone_number" placeholder="+91 9876543210" required>
+
+  <button>Register</button>
+</form>
+
+<a href="/login">Already have an account?</a>
+</div>

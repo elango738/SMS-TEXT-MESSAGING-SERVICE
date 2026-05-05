@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+<div class="container">
+<h2>Group Message</h2>
+<form method="post">
+<select name="group">
+{% for g in groups %}
+<option value="{{g[0]}}">{{g[1]}}</option>
+{% endfor %}
+</select>
+<textarea name="message" maxlength="160"></textarea>
+<button>Send</button>
+</form>
+</div>

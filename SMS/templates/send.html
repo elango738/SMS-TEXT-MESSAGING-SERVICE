@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+<h2>Send Message</h2>
+
+<form method="post">
+  Send To (Phone Number):
+  <select name="receiver_phone" required>
+    <option value="">-- Select Contact --</option>
+    {% for contact in contacts %}
+      <option value="{{ contact }}">{{ contact }}</option>
+    {% endfor %}
+  </select>
+
+  Message (max 160 chars):
+  <textarea name="message" maxlength="160" required></textarea>
+
+  <button>Send</button>
+</form>
+
+<a href="/dashboard">⬅ Back</a>
+</div>

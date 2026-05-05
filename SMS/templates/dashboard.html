@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+<div class="container">
+<h2>Welcome {{user}}</h2>
+<a href="/send">Send Message</a>
+<a href="/inbox">Inbox</a>
+<a href="/create_group">Create Group</a>
+<a href="/group_message">Group Message</a>
+{% if user=='admin' %}
+<a href="/admin">Admin Campaign</a>
+{% endif %}
+<a href="/logout">Logout</a>
+</div>

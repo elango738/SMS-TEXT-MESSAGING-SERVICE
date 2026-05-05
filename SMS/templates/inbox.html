@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+<h2>Inbox</h2>
+
+{% for m in messages %}
+<div class="message">
+<b>From:</b> {{ m[0] }} <br>
+<b>Message:</b> {{ m[1] }} <br>
+<b>Status:</b> {{ m[2] }}
+</div>
+{% else %}
+<p>No messages</p>
+{% endfor %}
+
+<a href="/dashboard">⬅ Back</a>
+</div>
